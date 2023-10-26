@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.pactomais.api.model.dto.ContaDTO;
+import com.pactomais.api.model.dto.ContaListagemDTO;
 import com.pactomais.api.model.entities.Conta;
 import com.pactomais.api.model.repository.ContaRepository;
 import com.pactomais.api.model.service.ContaService;
@@ -33,8 +34,8 @@ public class ContaController {
 	    }
 
 	    @GetMapping
-	    public ResponseEntity<List<Conta>> listarConta() {
-	        List<Conta> lista = repository.findAll();
-	        return ResponseEntity.ok(lista);
+	    public ResponseEntity<List<ContaListagemDTO>> listarContas() {
+	        List<ContaListagemDTO> contasDTO = service.listarContas();
+	        return ResponseEntity.ok(contasDTO);
 	    }
 }
