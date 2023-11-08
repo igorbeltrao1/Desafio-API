@@ -6,6 +6,8 @@ import lombok.Data;
 public class ContaListagemDTO {
 	
 	private Long id;
+		
+	private String nomeTitular;
 	
 	private String numeroConta;
 	

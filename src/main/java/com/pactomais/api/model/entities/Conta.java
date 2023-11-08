@@ -22,6 +22,8 @@ public class Conta {
 	@Id
 	private Long id;
 	
+	private String nomeTitular;
+	
 	private String numeroConta;
 	
 	private Double saldoConta;

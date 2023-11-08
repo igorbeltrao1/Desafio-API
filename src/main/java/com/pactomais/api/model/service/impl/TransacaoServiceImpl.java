@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.pactomais.api.exception.SaldoInsuficienteException;
+import com.pactomais.api.model.dto.ContaListagemDTO;
 import com.pactomais.api.model.dto.TransacaoDTO;
 import com.pactomais.api.model.entities.Conta;
 import com.pactomais.api.model.entities.Transacao;
@@ -33,6 +34,8 @@ public class TransacaoServiceImpl implements TransacaoService {
 		repository.save(transacao);
 		return null;
 	}
+	
+
 
 	@Transactional
 	public Conta depositarConta(Long id, Double valor) {
@@ -79,5 +82,6 @@ public class TransacaoServiceImpl implements TransacaoService {
 			return conta;
 		}
 	}
-
+	
+	
 }
